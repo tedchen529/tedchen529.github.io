@@ -1,0 +1,54 @@
+@import mixin
+
+@include hnpx(30)
+@include hnpx(40)
+@include hnpx(50)
+@include hnpx(300)
+@include hnpx(350)
+@include hnpx(450)
+@include hnpx(600)
+@include wnpx(30)
+@include wnpx(40)
+@include wnpx(50)
+@include wnpx(85)
+@include wnpx(100)
+@include wnpx(150)
+@include wnpx(260)
+@include wnpx(400)
+@include wnpx(500)
+@include wnpx(600)
+@include wnpx(1000)
+@include wnpx(1200)
+
+$twitterColors: #15202b, #192734, #2a3a47, #ffffff, #8899ac, #1D9BF0
+
+@for $i from 1 through 6
+	@include bgc(bg-twitter#{$i}, nth($twitterColors, $i))
+	@include txtc(txt-twitter#{$i}, nth($twitterColors, $i))
+	@include borderc(border-twitter#{$i}, nth($twitterColors, $i))
+
+.input-color:focus
+	outline: none
+	border: none
+	background-color: #15202b
+	color: #8899ac
+
+a
+	text-decoration: none
+	color: #8899ac
+
+.nav-btn:hover
+	color: #0D6EFD
+	border-bottom: 3px solid #0D6EFD
+
+.small-font
+	font-size: 14px
+
+.custom-border
+	border-bottom: 1px solid rgba(136,153,172, 0.25)
+
+.icon-color
+	color: #0D6EFD
+
+.button-position
+	margin-right: 300px
